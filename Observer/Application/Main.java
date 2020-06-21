@@ -13,6 +13,7 @@ public class Main extends Application {
 	@Override
 	
 	public void start(Stage primaryStage) {
+
 		BorderPane root = new BorderPane();
 		Scene scene = new Scene(root,240,240);
 		Button rojo = new Button("Rojo");
@@ -25,14 +26,14 @@ public class Main extends Application {
 		root.setBottom(bot);
 		
 		rojo.setOnAction(e->{
-			root.setStyle("-fx-background-color: #ff0000;");
+			PintarRojo(root);
 		});
 		azul.setOnAction(e->{
-			root.setStyle("-fx-background-color: #3b83bd;");
+			PintarAzul(root);
 		});
 		//#008f39
 		verde.setOnAction(e->{
-			root.setStyle("-fx-background-color: #008f39;");
+			PintarVerde(root);
 		});
 		
 		primaryStage.setScene(scene);
@@ -43,6 +44,14 @@ public class Main extends Application {
 		Application.launch(args);
 		}
 		
-	
+		public static void PintarRojo(BorderPane root) {
+			root.setStyle("-fx-background-color: #ff0000;");
+		}
+		public static void PintarVerde(BorderPane root) {
+			root.setStyle("-fx-background-color: #008f39;");
+		}
+		public static void PintarAzul(BorderPane root) {
+			root.setStyle("-fx-background-color: #3b83bd;");
+		}
 
 }
