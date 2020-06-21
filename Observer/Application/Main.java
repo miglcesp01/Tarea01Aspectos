@@ -43,7 +43,6 @@ public class Main extends Application {
 		public static void main(String[] args){
 		Application.launch(args);
 		}
-		
 		public static void PintarRojo(BorderPane root) {
 			root.setStyle("-fx-background-color: #ff0000;");
 		}
@@ -53,5 +52,7 @@ public class Main extends Application {
 		public static void PintarAzul(BorderPane root) {
 			root.setStyle("-fx-background-color: #3b83bd;");
 		}
+		
+
 
 }
