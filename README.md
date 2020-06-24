@@ -14,15 +14,15 @@ Se agregó la funcionalidad de AOP requerida, junto con el patrón de diseño Ob
 ## Pruebas
 
 Opción 1: Cambio de fondo a un color azul
-![Alt text](Tarea01Aspectos/imagenes/cambio_a_azul.png?raw=true "Imagen 1")
+![Alt text](imagenes/cambio_a_azul.png?raw=true "Imagen 1")
 
 
 Opción 2: Cambio de fondo a un color rojo  
-![Alt text](tarea01Aspectos/imagenes/cambio_a_rojo.png?raw=true "Imagen 2")
+![Alt text](imagenes/cambio_a_rojo.png?raw=true "Imagen 2")
 
 
 Opción 3: Cambio de fondo a un color verde
-![Alt text](Tarea01Aspectos/imagenes/cambio_a_verde.png?raw=true "Imagen 3")
+![Alt text](imagenes/cambio_a_verde.png?raw=true "Imagen 3")
 
 ## Autores:
 -Miguel Angel Licea Cespedes
