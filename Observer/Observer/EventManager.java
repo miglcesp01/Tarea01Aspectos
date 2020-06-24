@@ -1,32 +1,32 @@
 package Observer;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class EventManager {
-	Map<String, List<EventListener>> listeners = new HashMap<>();
+	private List<EventListener> observadores = new ArrayList<EventListener>();
+	private String estado;
+	
+	public String getEstado() {
+		return estado;
+	}
+	
+	public void setEstado(String estado) {
+		this.estado = estado;
+		notificar();
+	}
+	
+    public void subscribe(EventListener observador) {
+        observadores.add(observador);
+    }
 
-    public EventManager(String... operations) {
-        for (String operation : operations) {
-            this.listeners.put(operation, new ArrayList<>());
+    public void unsubscribe(EventListener observador) {
+        observadores.remove(observador);
+    }
+
+    public void notificar() {
+        for (EventListener observador: observadores) {
+        	observador.actualizar();
         }
-    }
-
-    public void subscribe(String eventType, EventListener listener) {
-        List<EventListener> users = listeners.get(eventType);
-        users.add(listener);
-    }
-
-    public void unsubscribe(String eventType, EventListener listener) {
-        List<EventListener> users = listeners.get(eventType);
-        users.remove(listener);
-    }
-
-    public void notify(String eventType, String email) {
-        List<EventListener> users = listeners.get(eventType);
-        for (EventListener listener : users) {
-            listener.update(eventType, email);
-        }
+        
     }
 }

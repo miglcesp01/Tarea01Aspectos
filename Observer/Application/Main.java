@@ -2,7 +2,6 @@ package Application;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
@@ -11,9 +10,8 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
 	@Override
-	
 	public void start(Stage primaryStage) {
-
+		
 		BorderPane root = new BorderPane();
 		Scene scene = new Scene(root,240,240);
 		Button rojo = new Button("Rojo");
@@ -41,7 +39,8 @@ public class Main extends Application {
 		primaryStage.show();
 		}
 		public static void main(String[] args){
-		Application.launch(args);
+			
+			Application.launch(args);
 		}
 		public static void PintarRojo(BorderPane root) {
 			root.setStyle("-fx-background-color: #ff0000;");

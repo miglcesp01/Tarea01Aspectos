@@ -1,17 +1,23 @@
+import Observer.Alerta;
+import Observer.EventManager;
+
 public aspect AspectJ {	
    
+	EventManager sujeto = new EventManager();
+	Alerta alterta = new Alerta(sujeto);
+	
     // collection of JoinPoint call pintarRojo of class Main.
     pointcut PintarRo(): execution(* PintarRojo(..)); 
     pointcut PintarAz(): execution(* PintarAzul(..)); 
     pointcut PintarVerde(): execution(* PintarVerde(..)); 
     after(): PintarRo() {
-    	System.out.println("Pintando a color rojo");
+    	sujeto.setEstado("rojo");
     }
     after(): PintarAz() {
-    	System.out.println("Pintando a color azul");
+    	sujeto.setEstado("azul");
     }
     after():PintarVerde(){
-    	System.out.println("Pintando a color verde");
+    	sujeto.setEstado("verde");
     }
 }
   
